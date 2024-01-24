@@ -1,3 +1,5 @@
-export function onRequest(context) {
-  return new Response("Hello, world!")
+import fact from 'https://catfact.ninja/fact'
+
+export function onRequestGet() {
+  return Response.json(fact)
 }
