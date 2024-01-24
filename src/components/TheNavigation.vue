@@ -9,23 +9,23 @@ export default {
           text: 'Home'
         },
         {
-          url: 'what',
+          url: '/what',
           text: 'What we do'
         },
         {
-          url: 'divide',
+          url: '/divide',
           text: 'The digital divide'
         },
         {
-          url: 'involved',
+          url: '/involved',
           text: 'Get involved'
         },
         {
-          url: 'network',
+          url: '/network',
           text: 'Our network'
         },
         {
-          url: 'insights',
+          url: '/insights',
           text: 'Insights'
         },
       ]
