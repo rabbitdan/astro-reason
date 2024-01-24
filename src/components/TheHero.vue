@@ -13,7 +13,7 @@
 <style lang="scss" scoped>
   .hero {
     align-items: flex-start;
-    background-image: url('http://placekitten.com/1920/600');
+    background-image: url('https://placekitten.com/1920/600');
     background-position: center;
     background-size: cover;
     display: flex;

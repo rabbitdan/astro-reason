@@ -5,7 +5,7 @@ import TheFingerprint from '../components/TheFingerprint.vue'
 <template>
 <div class="blocks">
   <div class="block block--image">
-    <img src="http://placekitten.com/800/400" alt="Kitten!" class="block__image">
+    <img src="https://placekitten.com/800/400" alt="Kitten!" class="block__image">
   </div>
   <div class="block block--text">
     <h3 class="subheading block__subheading">We are a social change charity, helping people through to improve their lives through digital.</h3>
