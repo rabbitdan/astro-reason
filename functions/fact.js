@@ -4,5 +4,5 @@ export async function onRequestGet() {
   // console.log('myJson is ', myJson);
   // const parsedResponse = JSON.parse(myJson);
   // console.log('parsedResponse is ', parsedResponse);
-  return new Response.json(myJson);
+  return Response.json(myJson);
 }
