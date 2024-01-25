@@ -32,10 +32,10 @@ export default {
     };
   },
   methods: {
-    handleToggle(e) {
-      e.stopPropagation();
-      this.open = !this.open;
-    }
+    // handleToggle(e) {
+    //   e.stopPropagation();
+    //   this.open = !this.open;
+    // }
   }
 }
 </script>
@@ -49,7 +49,7 @@ export default {
       <div class="bar"/>
     </div>
     <div class="navigation__panel" :class="{open: open}" :open="open">
-      <div class="navigation__close" @click="handleToggle" :open="open">&times;</div>
+      <div class="navigation__close" @click="this.open = !this.open;" :open="open">&times;</div>
       <ul>
         <li v-for="navLink in navLinks">
           <a :href="navLink.url" class="navigation__link">{{ navLink.text }}</a>
@@ -60,8 +60,25 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-  .store {
-    color: black;
+  .burger {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 2rem;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    position: relative;
+    width: 2rem;
+    &--open {
+
+    }
+    .bar {
+      background-color: var(--vt-c-black);
+      display: block;
+      height: 0.25rem;
+      width: 2rem;
+    }
   }
   .navigation {
     .burger {

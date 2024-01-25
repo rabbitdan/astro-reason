@@ -1,13 +1,11 @@
-<script>
-export default {
-
-}
-</script>
+<script></script>
 
 <template>
   <div class="hero">
     <h1 class="heading hero__heading">Get online week 2021</h1>
-    <p class="text hero__text" id="hero-text">--</p>
+    <p class="text hero__text" id="hero-text">
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+    </p>
     <a href="/involved" class="button button--default button--round">Get involved now!</a>
   </div>
 </template>

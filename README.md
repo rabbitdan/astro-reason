@@ -1,3 +1,16 @@
+# Note for Mark & co @ Reason
+Hi, Ive never used Astro beyond having a quick look at it a few years ago when it was version 0.1.
+I was excited about it at the time but have ended up focusing on Nuxt since.
+So I've been diving in to this afresh. 
+It's been cool to get some insight in to it though so thanks. :)
+
+One consequence of this is that seemingly the Vue life cycle is profoundly different in Astro!
+I haven't been able to read up on that but would be interested to see what's what there.
+Data works for example, but seemingly not mounted(). Figures, I guess.
+
+So the nav doesn't open. Again easy to fix but I'll leave it because I don't know much about Astro!
+
+
 # Astro Starter Kit: Basics
 
 ```sh
