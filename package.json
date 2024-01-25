@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/vue": "^4.0.8",
+    "@cloudflare/kv-asset-handler": "^0.3.1",
     "astro": "^4.2.1",
     "vue": "^3.4.15"
   },

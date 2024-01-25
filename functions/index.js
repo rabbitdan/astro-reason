@@ -12,17 +12,24 @@
 //   return new HTMLRewriter().on('#hero-text', new myJson).transform(response);
 // }
 
+import { getAssetFromKV, defaultKeyModifier } from '@cloudflare/kv-asset-handler';
+
+addEventListener('fetch', event => {
+  event.respondWith(handleRequest(event));
+});
+
 class FactElementHandler {
   async element(element) {
-    let response = await fetch(new Request('/'));
-    console.log('response is ', response);
+    console.log(`Incoming element: ${element.tagName}`);
     let catFactResponse = await fetch(new Request('https://catfact.ninja/fact'));
-    //const myJson = await catFactResponse.json();
     return await catFactResponse.json();
   }
 }
 
 export async function handleRequest(req) {
+  console.log('req is ', req);
+  let catFactResponse = await fetch(new Request('https://catfact.ninja/fact'));
+  let catFact = await catFactResponse.json();
   const res = await fetch(req);
   return new HTMLRewriter().on('div#hero-text', new FactElementHandler()).transform(res);
 }
