@@ -12,10 +12,9 @@
 //   return new HTMLRewriter().on('#hero-text', new myJson).transform(response);
 // }
 
-//import { getAssetFromKV, defaultKeyModifier } from '@cloudflare/kv-asset-handler';
-
 addEventListener('fetch', event => {
-  console.log('eventListener runs');
+  console.log('eventListener runs with ', event);
+  event.passThroughOnException()
   event.respondWith(handleRequest(event));
 });
 
@@ -24,11 +23,9 @@ async function handleRequest(request) {
   console.log('request is ', request)
   let html = await response.text()
   console.log('html is ', html)
-  // Inject scripts
   const customScripts = '<style type="text/css">body{background:red}</style></body>'
   html = html.replace( /<\/body>/ , customScripts)
 
-  // return modified response
   return new Response(html, {
     headers: response.headers
   })
