@@ -14,27 +14,23 @@
 
 //import { getAssetFromKV, defaultKeyModifier } from '@cloudflare/kv-asset-handler';
 
-export function onRequest(event) {
-  // addEventListener('fetch', event => {
-    //console.log('eventListener runs');
-    handleRequest(event);
-  // });
+addEventListener('fetch', event => {
+  console.log('eventListener runs');
+  event.respondWith(handleRequest(event));
+});
+
+async function handleRequest(request) {
+  const response = await fetch(request)
+  console.log('request is ', request)
+  let html = await response.text()
+  console.log('html is ', html)
+  // Inject scripts
+  const customScripts = '<style type="text/css">body{background:red}</style></body>'
+  html = html.replace( /<\/body>/ , customScripts)
+
+  // return modified response
+  return new Response(html, {
+    headers: response.headers
+  })
 }
 
-// addEventListener('fetch', event => {
-//   console.log('eventListener runs');
-//   event.respondWith(handleRequest(event));
-// });
-
-class FactElementHandler {
-  async element(element) {
-    console.log(`Incoming element: ${element.tagName}`);
-  }
-}
-
-export async function handleRequest(req) {
-  console.log('req is ', req);
-  let catFactResponse = await fetch(new Request('https://catfact.ninja/fact'));
-  const res = await catFactResponse.json();
-  return new HTMLRewriter().on('div#hero-text', new FactElementHandler()).transform(res);
-}
