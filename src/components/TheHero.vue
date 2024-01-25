@@ -1,21 +1,13 @@
 <script>
 export default {
-  data () {
-    return {
-      catFact: null,
-      thing: 'cheese'
-    }
-  },
-  mounted () {
-    console.log('thing is ', this.thing);
-  }
+
 }
 </script>
 
 <template>
   <div class="hero">
     <h1 class="heading hero__heading">Get online week 2021</h1>
-    <p class="text hero__text" id="hero-text">{{ thing }}</p>
+    <p class="text hero__text" id="hero-text">--</p>
     <a href="/involved" class="button button--default button--round">Get involved now!</a>
   </div>
 </template>

@@ -14,10 +14,17 @@
 
 //import { getAssetFromKV, defaultKeyModifier } from '@cloudflare/kv-asset-handler';
 
-addEventListener('fetch', event => {
-  console.log('eventListener runs');
-  event.respondWith(handleRequest(event));
-});
+export function onRequest(event) {
+  // addEventListener('fetch', event => {
+    //console.log('eventListener runs');
+    event.respondWith(handleRequest(event));
+  // });
+}
+
+// addEventListener('fetch', event => {
+//   console.log('eventListener runs');
+//   event.respondWith(handleRequest(event));
+// });
 
 class FactElementHandler {
   async element(element) {
