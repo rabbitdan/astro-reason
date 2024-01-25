@@ -17,7 +17,7 @@
 export function onRequest(event) {
   // addEventListener('fetch', event => {
     //console.log('eventListener runs');
-    event.respondWith(handleRequest(event));
+    handleRequest(event);
   // });
 }
 
