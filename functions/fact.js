@@ -1,6 +1,8 @@
 export function onRequestGet() {
-  const fact = fetch('https://catfact.ninja/fact');
-  const myJson = fact.json();
-  console.log('myJson is ', myJson);
-  return myJson;
+  const returnedFact = async ()  => {
+    const fact = await fetch('https://catfact.ninja/fact');
+    const myJson = await fact.json();
+    console.log('myJson is ', myJson);
+    return myJson;
+  }
 }
