@@ -1,4 +1,4 @@
-import { onRequest as __api_js_onRequest } from "/Users/danielfone/sites/astro-reason/functions/api.js"
+import { onRequest as __api_js_onRequest } from "/Users/danielfone/sites/astro-reason/functions/fact.js"
 
 export const routes = [
     {

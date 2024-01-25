@@ -1,4 +1,4 @@
-// api.js
+// fact.js
 import fact from "https://catfact.ninja/fact";
 function onRequestGet() {
   return Response.json(fact);
