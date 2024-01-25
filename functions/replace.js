@@ -3,6 +3,10 @@ addEventListener('fetch', event => {
   event.respondWith(handleRequest(event.request))
 })
 
+/**
+ * Fetch and log a given request object
+ * @param {Request} request
+ */
 async function handleRequest(request) {
   console.log('replace script is running')
   const response = await fetch(request)
